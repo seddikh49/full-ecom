@@ -35,7 +35,7 @@ const List = ({token}) => {
           if(response.data.success){
             toast.success(response.data.msg)
             navigate(()=> `/list`)
-            console.log('messageccdfsdsfds')
+            console.log('messagesdfsf')
           }
 
         } catch (error) {
