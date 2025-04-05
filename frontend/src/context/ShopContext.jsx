@@ -17,6 +17,7 @@ const ShopContextProvider = ({ children }) => {
     const [searchBar, setSearchBar] = useState(false);
     const [takeItem, setTakeItem] = useState({});
     const [products, setProducts] = useState([]);
+    const [token, setToken] = useState('');
     const navigate = useNavigate()
 
 
@@ -109,7 +110,9 @@ const ShopContextProvider = ({ children }) => {
         countOfCarts,
         getCartAmount,
         navigate,
-        backend_url
+        backend_url,
+        token,
+        setToken
     }
 
 

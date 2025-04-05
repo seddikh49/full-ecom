@@ -4,7 +4,7 @@ import { assets } from "../‏‏assets/frontend_assets/assets";
 import { useLocation } from 'react-router-dom';
 
 import { GoChevronLeft } from "react-icons/go";
-import { ShopContext } from "../context/ShopContext";
+import { ShopContext } from "../context/shopContext";
 
 const Navbar = () => {
 
@@ -74,12 +74,12 @@ const Navbar = () => {
       </div>
       <div className="flex items-center gap-2">
           <img onClick={()=> setSearchBar(true)} className={`w-5 ${showSearch ?'opacity-100 ' : 'opacity-0 pointer-events-none'}`} src={assets.search_icon} alt="" />
-        <div className="group relative">
+        <div className="group relative ">
          <Link to={'/login'} > <img className="w-5 min-w-5 ml-2 " src={assets.profile_icon} alt="" /></Link>
           <div
             className="group-hover:block hidden font-poppins
            font-bold absolute py-2 px-5 right-0 dropdown-menu
-            text-gray-500 bg-gray-100 top-[150%] w-36 rounded-md "
+            text-gray-500 bg-gray-100  w-36 rounded-md "
           >
             <p className="cursor-pointer hover:text-gray-800 p-1">My profile</p>
             <p className="hover:text-gray-800 cursor-pointer p-1">Orders</p>

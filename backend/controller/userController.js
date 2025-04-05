@@ -20,7 +20,7 @@ const loginUser = async(req, res) => {
         const isMatch = await bcrypt.compare(password, existUser.password)
         if (isMatch) {
             const token = createToken(userModel._id)
-            res.json({ success: true, msg: token })
+            res.json({ success: true, token: token })
         } else {
             res.json({ success: false, msg: "invalid crendtials" })
 
@@ -37,7 +37,7 @@ const registerUser = async(req, res) => {
         const { name, email, password } = req.body;
         const existEmail = await userModel.findOne({ email });
         if (existEmail) {
-            return res.json({ success: false, msg: `this email  is already exists` });
+            return res.json({ success: false, msg: `this user is already exists` });
         }
 
         if (!validator.isEmail(email)) {
@@ -60,7 +60,7 @@ const registerUser = async(req, res) => {
         const user = await newUser.save();
 
         const token = createToken(user._id)
-        res.json({ token: token })
+        res.json({ success: true, msg: "you successfuly registered", token: token })
 
     } catch (error) {
         res.json({ err: error });
