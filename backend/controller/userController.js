@@ -13,7 +13,7 @@ const loginUser = async(req, res) => {
         const { email, password } = req.body
         const existUser = await userModel.findOne({ email })
         const salt = await bcrypt.genSalt(10);
-        const hashedPassowrd = await bcrypt.hash(password, salt);
+        // const hashedPassowrd = await bcrypt.hash(password, salt);
         if (!existUser) {
             res.json({ succes: false, msg: "This user doesn't exists" })
         }

@@ -2,7 +2,8 @@ import React, { useContext, useState, useEffect } from 'react'
 import ProductItems from '../componets/ProductItems';
 import Title from '../componets/Title';
 import { GoChevronDown } from "react-icons/go";
-import { ShopContext } from '../context/ShopContext';
+import { ShopContext } from '../context/shopContext';
+
 
 
 const Collection = () => {

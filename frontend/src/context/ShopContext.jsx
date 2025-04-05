@@ -77,17 +77,12 @@ const ShopContextProvider = ({ children }) => {
 
     const getProducts = async () => {
         try {
-            const response = await axios.get(`${backend_url}api/product/list`)
-            console.log(response.data)
-           
+            const response = await axios.get(`${backend_url}api/product/list`)        
             if(response.data.msg){
-                console.log("message")
-                console.log(response.data.products)
                 setProducts(response.data.products)
             }else{
                 toast.error('there no data here')
             }
-            // console.log(products)
         } catch (error) {
             console.log(error)
         }
