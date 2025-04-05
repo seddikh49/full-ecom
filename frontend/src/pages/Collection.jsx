@@ -57,7 +57,7 @@ const Collection = () => {
   useEffect(() => {
     applyFilter()
     sorterdProducts()
-  }, [category, subCategory, sortedBy, search]);
+  }, [category, subCategory, sortedBy, search,products]);
 
 
   const sorted = (e) => {

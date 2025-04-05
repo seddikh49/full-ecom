@@ -47,8 +47,8 @@ const Product = () => {
   return product && (
     <div>
       <div className='h-max flex gap-15 xl:flex-row xm:flex-col sm:flex-col'>
-        <div className='xl:w-auto md:w-full sm:h-[50vh] xm:h-[50vh] md:h-[60vh] xl:h-[70vh] xl:gap-7 xm:gap-1 sm:gap-2 flex'>
-          <div className=' h-full justify-between flex flex-col  items-center'>
+        <div className='xl:w-auto md:w-full sm:h-[50vh] xm:h-[50vh] md:h-[60vh]  xl:h-[70vh]  xl:gap-7 xm:gap-1 sm:gap-2 flex'>
+          <div className=' h-full justify-between flex flex-col   items-center'>
             {product.image.map((img, index) => {
               return (
                 <img onClick={() => setImage(img)} key={index} className='h-[24%] object-cover' src={img} alt="" />

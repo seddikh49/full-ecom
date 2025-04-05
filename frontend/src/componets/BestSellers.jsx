@@ -13,7 +13,7 @@ const BestSellers = () => {
         return item.bestseller === true
       })
       setbestSellers(bestFilter.slice(0,5))
-    }, [])
+    }, [products])
 
 
   return (

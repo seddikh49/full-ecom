@@ -18,8 +18,8 @@ const Add = ({token}) => {
   const [name, setName] = useState("");
   const [description, setdescription] = useState();
   const [price, setprice] = useState('');
-  const [category, setCategory] = useState();
-  const [subCategory, setSubCategory] = useState();
+  const [category, setCategory] = useState("Men");
+  const [subCategory, setSubCategory] = useState("Topwear");
   const [bestSeller, setBestSeller] = useState(false);
   const [sizes, setSizes] = useState([]);
 
@@ -76,7 +76,7 @@ const Add = ({token}) => {
     <div className='p-10 w-full'>
       <form onSubmit={handleSubmit} className='flex flex-col items-start gap-3' action="">
         <div className='flex flex-col gap-2'>
-          <h1 className='text-2xl font-poppins'>Upload Image</h1>
+          <h1 className='text-xl font-poppins'>Upload Image</h1>
           <div className='flex gap-2'>
             <label htmlFor="image1">
               <img className='w-20 h-15' src={!image1 ? assets.upload_area : URL.createObjectURL(image1)} alt="" />
