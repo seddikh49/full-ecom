@@ -91,6 +91,9 @@ const ShopContextProvider = ({ children }) => {
 
     useEffect(() => {
         getProducts()
+        if(!token && localStorage.getItem('token')){
+              setToken(localStorage.getItem('token'))
+        }
     }, []);
 
 
@@ -112,7 +115,9 @@ const ShopContextProvider = ({ children }) => {
         navigate,
         backend_url,
         token,
-        setToken
+        setToken,
+        navigate,
+        setTakeItem
     }
 
 

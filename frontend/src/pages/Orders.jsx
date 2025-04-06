@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import Title from '../componets/Title'
-import { ShopContext } from '../context/ShopContext'
-
+import { ShopContext } from '../context/shopContext'
 const Orders = () => {
   const { products, currency } = useContext(ShopContext)
   console.log(products.slice(1, 4))

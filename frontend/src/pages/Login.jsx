@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useContext } from 'react';
+import { useState, useContext,useEffect } from 'react';
 import axios from 'axios';
 import { ShopContext } from '../context/shopContext';
 import { toast } from 'react-toastify';
@@ -9,7 +9,7 @@ const Login = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { backend_url,token,setToken } = useContext(ShopContext)
+  const { backend_url,token,setToken ,navigate} = useContext(ShopContext)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -47,6 +47,12 @@ const Login = () => {
       console.log(error)
     }
   }
+
+  useEffect(() => {
+    if(token){  
+      navigate('/')
+    }
+  }, [token]);
 
   const [currentState, setCurrentState] = useState('Login');
   return (
